@@ -7,12 +7,13 @@
 </head>
 
 <body>
-    	
+
     <section id="home">
+        <div class="square"></div>
         <header>
             <a href="#" class="logo"><img src="logo.png"></a>
             <ul>
-                <li><a href="home">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Models</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -23,12 +24,30 @@
                 <p>Is a journey back to life</p>
             </div>
         </div>
-        
+
     </section>
 
     <section>
-
+        <div class="imgBox">
+            <img src="img1.png" class="bikes">
+        </div>
+        <ul class="thumb">
+            <li> <img src="thumb1.png" onclick="imgSlider('img1.png');changeSquareColor('#fff')"> </li>
+            <li> <img src="thumb2.png" onclick="imgSlider('img2.png');changeSquareColor('#0000FF')"> </li>
+            <li> <img src="thumb3.png" onclick="imgSlider('img3.png');changeSquareColor('#D2691E')"> </li>
+        </ul>
     </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            Document.querySelector('.bikes') .src = anything;
+        }
+
+        function changeSquareColor(color){
+            const square = document.querySelector('.sqare');
+            square.style.background = color
+        }
+    </script>
 
 </body>
 
