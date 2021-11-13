@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "lpcaloi"]
+	url = https://github.com/Katchaaau/LandingPage.git
+	fetch = +refs/heads/*:refs/remotes/lpcaloi/*
