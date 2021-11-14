@@ -163,6 +163,7 @@ button:hover
     margin-left: 200px;
     border-radius: 20px;
     box-shadow: 5px 5px rgba(27, 25, 25, 0.308);
+    max-width: 100%;
 }
 
 .container label
