@@ -8,15 +8,17 @@
 
 <body>
 
-    <section id="home">
+    <section id="home" class="home">
         <div class="square"></div>
         <header>
             <a href="#" class="logo"><img src="logo.png"></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Models</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <nav id=nav-bar>
+                <ul>
+                    <li><a class="nav-link" href="Home">Home</a></li>
+                    <li><a class="nav-link" href="models">Models</a></li>
+                    <li><a class="nav-link" href="contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
         <div class="content">
             <div class="textBox">
@@ -32,23 +34,52 @@
             <img src="img1.png" class="bikes">
         </div>
         <ul class="thumb">
-            <li> <img src="thumb1.png" onclick="imgSlider('img1.png');changeSquareColor('#fff')"> </li>
-            <li> <img src="thumb2.png" onclick="imgSlider('img2.png');changeSquareColor('#0000FF')"> </li>
-            <li> <img src="thumb3.png" onclick="imgSlider('img3.png');changeSquareColor('#D2691E')"> </li>
+            <li> <img src="thumb1.png" onmouseover="imgSlider('img1.png')"> </li>
+            <li> <img src="thumb1.png" onmouseover="imgSlider('img2.png')"> </li>
+            <li> <img src="thumb1.png" onmouseover="imgSlider('img3.png')"> </li>
         </ul>
     </section>
 
     <script type="text/javascript">
-        function imgSlider(anything){
-            Document.querySelector('.bikes') .src = anything;
+        function imgSlider(anything) {
+            document.querySelector('.bikes').src = anything;
         }
 
-        function changeSquareColor(color){
+        function changeSquareColor(color) {
             const square = document.querySelector('.sqare');
             square.style.background = color
         }
     </script>
 
+    <section>
+        <div class="form">
+            <form>
+                <div class="dream">
+                    <h2>Let us be part of your dream</h2>
+                    <p>Subscribe to receive news every week about the biggest happenings in bike's world</p>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+</div>
+
+<form>
+    <div class="container">
+        <form id="survey-form">
+            <label for="name" id="name-label">
+                Name
+                <input id="name" type="text" required placeholder="Anna Bittencourt">
+            </label>
+
+            <label for="email" id="email-label">
+                E-mail
+                <input id="email" type="email" required placeholder="Bittercounrtanna@email.com">
+            </label>
+        
+        </form>
+    </div>
+</form>
 </body>
 
 </html>
